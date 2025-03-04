@@ -10,8 +10,8 @@
 
 ## Table of Contents
 
-- [Problem Statement](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
-- [Solution](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
+- Problem Statement
+- Solution
 - [Tech Stack](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
 - [Setup & Installation](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
 - [Features](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
@@ -22,25 +22,15 @@
 ---
 
 ## Problem Statement
+People with cognitive impairments often struggle with memory loss and disorientation, leading to frustration and a loss of independence. They lack easy access to these memories. There is a need for a tool that provides seamless access to meaningful memories, helping to improve recall, emotional well-being, and a sense of identity.
 
-- What problem does this app solve?
-- Who is the target user?
-
-Example:
-
-> Renting a property can be stressful due to unclear communication. Many landlords and tenants rely on emails or texts, leading to misunderstandings, lost documents, and disputes.
-> 
+The app is designed for individuals experiencing memory challenges due to cognitive impairments, such as dementia, Alzheimer’s, or brain injuries. It is also beneficial for their caregivers and family members, providing a shared space to preserve and interact with important memories, improving communication, and strengthening emotional connections.
 
 ---
 
 ## Solution
 
-- What does your app do to solve this?
-
-Example:
-
-> LetChat provides a secure platform where landlords and tenants can chat, track maintenance tickets, and upload documents—all in one place.
-> 
+This app helps individuals with cognitive impairments overcome memory loss and disorientation by providing an easy-to-navigate platform for storing and revisiting meaningful memories. It reduces frustration by organizing memories in a structured way, using images and short stories as prompts to trigger recollection and emotions. By enabling users to engage in meaningful conversations with family and caregivers, the app fosters emotional well-being, a sense of identity, and greater independence.
 
 ---
 
