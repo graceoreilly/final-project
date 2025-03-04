@@ -1,10 +1,8 @@
-# Final group project- CHANGE
+# My Memories
 
-### **Project Name **
+A memory aid app that helps individuals with cognitive impairments store and revisit their cherished memories, enhancing recall, emotional well-being, and independence.
 
-**A memory aid app that helps individuals with cognitive impairments store and revisit their cherished memories, enhancing recall, emotional well-being, and independence.**
-
-**Live Demo:** [Your App Link](https://your-app.com/) *(if available)*
+**Live Demo:** https://my-memories-omega.vercel.app/
 
 ---
 
