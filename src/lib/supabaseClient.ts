@@ -31,4 +31,4 @@ async function signIn(email: string, password: string) {
   return { user: data.user, error };
 }
 
-export { signIn, signUp };
+export { supabase, signIn, signUp };
