@@ -28,6 +28,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <Image
+          //comment
               className={styles.logo}
               src="/vercel.svg"
               alt="Vercel logomark"
