@@ -36,6 +36,11 @@ export default function Navigation() {
     <nav className={styles.navigation}>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
+          <Link href="/home" className={styles.navLink}>
+            Home
+          </Link>
+        </li>
+        <li className={styles.navItem}>
           <Link href="/about" className={styles.navLink}>
             About Me
           </Link>

@@ -19,6 +19,8 @@ import styles from "./page.module.css"
 import Header from "@/components/header/header"
 import Footer from "@/components/footer/footer"
 import Navigation from "@/components/navigation/navigation"
+import SignUpPage from "./auth/signup/page"
+
 
 export default function Home() {
   return (
@@ -26,11 +28,14 @@ export default function Home() {
       <main className={styles.main}>
         <Header></Header>
         <Navigation></Navigation>
-        <div className={styles.content}>
-          {/* Your page content goes here */}
+
+        {/** if user clicks signIn, go to <SignInpage , else fo to Sign UP Page */}
+        < SignUpPage />
+
+        {/* <div className={styles.content}>
           <h2>Welcome to MyMemories</h2>
           <p>Store and share your precious memories with your loved ones.</p>
-        </div>
+        </div> */}
         <Footer></Footer>
       </main>
     </div>
