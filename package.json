@@ -7,11 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
-  },
-  "dependencies": {
-    "jest": "^29.7.0",
-    "next": "15.2.1",
+    "test": "vitest run",
     "prepare": "husky",
     "format": "prettier --write .",
     "pre-commit": "eslint && prettier --check ."
@@ -27,14 +23,13 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/jest": "^29.5.14",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.1",
-    "ts-jest": "^29.2.6",
     "husky": "^9.1.7",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^3.0.7"
   }
 }
