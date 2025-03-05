@@ -15,10 +15,10 @@
 //   );
 // }
 
-import styles from "./page.module.css"
-import Header from "@/components/header/header"
-import Footer from "@/components/footer/footer"
-import Navigation from "@/components/navigation/navigation"
+import styles from "./page.module.css";
+import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
+import Navigation from "@/components/navigation/navigation";
 
 export default function Home() {
   return (
@@ -34,6 +34,5 @@ export default function Home() {
         <Footer></Footer>
       </main>
     </div>
-  )
+  );
 }
-
