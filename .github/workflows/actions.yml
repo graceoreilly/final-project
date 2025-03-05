@@ -18,10 +18,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Clean Install
+      - name: Clean Install (Windows)
         run: |
-          rm -rf node_modules package-lock.json
+          Remove-Item -Recurse -Force node_modules, package-lock.json
           npm install
+        shell: pwsh
 
       - name: Install dependencies
         run: npm install
