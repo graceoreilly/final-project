@@ -28,8 +28,8 @@
 //   );
 // }
 
-import Link from "next/link"
-import styles from "./navigation.module.css"
+import Link from "next/link";
+import styles from "./navigation.module.css";
 
 export default function Navigation() {
   return (
@@ -67,6 +67,5 @@ export default function Navigation() {
         </li>
       </ul>
     </nav>
-  )
+  );
 }
-

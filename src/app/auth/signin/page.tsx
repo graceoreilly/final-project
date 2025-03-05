@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import AuthSignInForm from "@/components/auth/SignInForm";
 
@@ -15,5 +15,5 @@ export default function SignInPage() {
       {/* <AuthSignInForm redirectTo="/dashboard" /> */}
       <AuthSignInForm redirectTo="/home" />
     </div>
-    )
+  );
 }
