@@ -5,6 +5,9 @@ export default function Navigation() {
     return (
 <nav>
 <ul className={styles.navList}>
+        <li>
+            <Link href="/">Home</Link>
+        </li>
           <li>
             <Link href="/timeline">Timeline</Link>
           </li>
