@@ -4,6 +4,7 @@ import { useState } from "react";
 import { supabase } from "../../lib/supabaseClient";
 import Link from "next/link"; //allows navigation between pages for login
 
+
 // create TS interface obj for what the object function expects to take in
 interface AuthSignUpFormProps {
   //onSucess will be called if sign-up is successful
@@ -88,11 +89,17 @@ export default function AuthSignUpForm({ onSuccess }: AuthSignUpFormProps) {
     }
   };
 
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        {error && <div>{error}</div>}
-
+    return  (
+     <div> 
+         <div>
+         <div>
+            <form onSubmit={handleSubmit}>
+        {error && (
+          <div>
+            {error}
+          </div>
+        )}
+        
         {message && (
           <div>
             <h3>Email Verification Required</h3>
@@ -148,9 +155,17 @@ export default function AuthSignUpForm({ onSuccess }: AuthSignUpFormProps) {
 
       <div>
         <p>
-          Already have an account? <Link href="/auth/signin">Sign in</Link>
+          Already have an account?{' '}
+          {/* <Link href="/">Sign in</Link> */}
+          <Link href="/auth/signin">
+            Sign in
+          </Link>
         </p>
       </div>
-    </div>
-  );
+        </div>
+        </div>
+      
+      </div>
+       
+    )
 }
