@@ -57,15 +57,11 @@ a {
   color: #666;
 }
 
-
-
 /* Add to your globals.css 
 .signup-page {
     If you need styling for the outer container 
 }
 */
-
-
 
 .signup-container {
   display: flex;

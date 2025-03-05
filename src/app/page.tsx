@@ -15,12 +15,11 @@
 //   );
 // }
 
-import styles from "./page.module.css"
-import Header from "@/components/header/header"
-import Footer from "@/components/footer/footer"
-import Navigation from "@/components/navigation/navigation"
-import SignUpPage from "./auth/signup/page"
-
+import styles from "./page.module.css";
+import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
+import Navigation from "@/components/navigation/navigation";
+import SignUpPage from "./auth/signup/page";
 
 export default function Home() {
   return (
@@ -30,7 +29,7 @@ export default function Home() {
         <Navigation></Navigation>
 
         {/** if user clicks signIn, go to <SignInpage , else fo to Sign UP Page */}
-        < SignUpPage />
+        <SignUpPage />
 
         {/* <div className={styles.content}>
           <h2>Welcome to MyMemories</h2>
