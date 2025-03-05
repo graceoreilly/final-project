@@ -9,9 +9,8 @@ export default function Home() {
       <main className={styles.main}>
         <Header></Header>
         <Navigation></Navigation>
-       <Footer></Footer>
+        <Footer></Footer>
       </main>
-      
     </div>
   );
 }
