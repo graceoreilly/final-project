@@ -11,7 +11,8 @@
     "test": "vitest run",
     "format": "prettier --write .",
     "prepare": "husky",
-    "pre-commit": "eslint && prettier --check ."
+    "pre-commit": "eslint && prettier --check .",
+    "tsc": "tsc -noEmit"
   },
   "dependencies": {
     "@supabase/auth-helpers-nextjs": "^0.10.0",
