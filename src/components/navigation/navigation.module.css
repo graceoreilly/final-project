@@ -1,41 +1,39 @@
 .navigation {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-color: #271f30;
-    z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navList {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-  }
-  
-  .navItem {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navLink {
-    display: block;
-    padding: 1rem 1.5rem;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
-  }
-  
-  .navLink:hover {
-    background-color: #b9f5d8;
-    color: #271f30;
-  }
-  
-  .navLink:active {
-    background-color: #9ffff5;
-  }
-  
-  
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #271f30;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.navItem {
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.navLink:hover {
+  background-color: #b9f5d8;
+  color: #271f30;
+}
+
+.navLink:active {
+  background-color: #9ffff5;
+}
