@@ -4,18 +4,22 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "../../lib/supabaseClient";
+import styles from './SignInForm.module.css'
 
 interface AuthSignInFormProps {
   //function that runs after successful sign-in
   onSuccess?: () => void;
   //A URL string for where to redirect users
   redirectTo?: string;
+  // Add this optional prop for toggling between forms
+  onToggleToSignUp?: () => void;
 }
 
 //Sign in component
 export default function AuthSignInForm({
   onSuccess,
   redirectTo,
+  onToggleToSignUp
 }: AuthSignInFormProps) {
   // declare variables for state
   const [email, setEmail] = useState("");
@@ -72,13 +76,15 @@ export default function AuthSignInForm({
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        {error && <div>{error}</div>}
+    <div className={styles.formContainer}>
+      <h2 className={styles.formTitle}>Sign in to your account</h2>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        {error && <div className={styles.errorMessage}>{error}</div>}
 
-        <div>
-          <label htmlFor="email">Email address</label>
+        <div className={styles.formGroup}>
+          <label className={styles.label} htmlFor="email">Email address</label>
           <input
+            className={styles.input}
             id="email"
             name="email"
             type="email"
@@ -89,9 +95,10 @@ export default function AuthSignInForm({
           />
         </div>
 
-        <div>
-          <label htmlFor="password">Password</label>
+        <div className={styles.formGroup}>
+          <label className={styles.label} htmlFor="password">Password</label>
           <input
+            className={styles.input}
             id="password"
             name="password"
             type="password"
@@ -102,20 +109,26 @@ export default function AuthSignInForm({
           />
         </div>
 
-        <div>
-          <div>
+        <div className={styles.rememberForgotRow}>
+          <div className={styles.rememberMe}>
             {/* Checkbox to remember login details */}
-            <input id="remember-me" name="remember-me" type="checkbox" />
+            <input 
+              className={styles.checkboxInput}
+              id="remember-me" 
+              name="remember-me" 
+              type="checkbox" 
+            />
             <label htmlFor="remember-me">Remember me</label>
           </div>
 
           <div>
-            <Link href="/auth/forgot-password">Forgot your password?</Link>
+            <Link className={styles.forgotPassword} href="/auth/forgot-password">Forgot your password?</Link>
           </div>
         </div>
 
         <div>
           <button
+            className={styles.submitButton}
             type="submit"
             // Prevents multiple clicks
             disabled={loading}
@@ -126,11 +139,16 @@ export default function AuthSignInForm({
         </div>
       </form>
 
-      <div>
+      <div className={styles.signUpPrompt}>
         <p>
-          Don`&apos;`t have an account?{" "}
-          {/* Navigate to the sign-up page if user does not have account */}
-          <Link href="/auth/signup">Sign up</Link>
+          Don&apos;t have an account?{" "}
+          <button 
+            onClick={onToggleToSignUp}
+            type="button"
+            className={styles.signUpButton}
+          >
+            Sign up !!!
+          </button>
         </p>
       </div>
     </div>
