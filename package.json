@@ -7,16 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
-  },
-  "dependencies": {
-    "jest": "^29.7.0",
-    "next": "15.2.1",
-    "prepare": "husky",
+    "test": "jest",
     "format": "prettier --write .",
+    "prepare": "husky",
     "pre-commit": "eslint && prettier --check ."
   },
   "dependencies": {
+    "jest": "^29.7.0",
     "@supabase/auth-helpers-nextjs": "^0.10.0",
     "@supabase/supabase-js": "^2.49.1",
     "dotenv": "^16.4.7",
