@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.memoryForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%; /* Set width for the form */
+}
+
+.input,
+.textarea,
+.button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.textarea {
+  height: 100px;
+  resize: none;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.timelineContainer {
+  width: 55%; /* Set width for the timeline */
+  display: flex;
+  flex-direction: column;
+  max-height: 500px; /* Set the maximum height of the timeline */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  padding-right: 10px; /* Add some padding to the right to avoid cutting off the scrollbar */
+}
+
+.memoryImage {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
