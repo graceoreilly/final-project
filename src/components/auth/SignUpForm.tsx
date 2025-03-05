@@ -4,7 +4,6 @@ import { useState } from "react";
 import { supabase } from "../../lib/supabaseClient";
 import Link from "next/link"; //allows navigation between pages for login
 
-
 // create TS interface obj for what the object function expects to take in
 interface AuthSignUpFormProps {
   //onSucess will be called if sign-up is successful
@@ -89,83 +88,74 @@ export default function AuthSignUpForm({ onSuccess }: AuthSignUpFormProps) {
     }
   };
 
-    return  (
-     <div> 
-         <div>
-         <div>
-            <form onSubmit={handleSubmit}>
-        {error && (
-          <div>
-            {error}
-          </div>
-        )}
-        
-        {message && (
-          <div>
-            <h3>Email Verification Required</h3>
-            <p>{message}</p>
-          </div>
-        )}
-
-        <div>
-          <label htmlFor="email">Email address</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            autoComplete="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            autoComplete="new-password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="confirmPassword">Confirm Password</label>
-          <input
-            id="confirmPassword"
-            name="confirmPassword"
-            type="password"
-            autoComplete="new-password"
-            required
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
-        </div>
-
-        <div>
-          <button type="submit" disabled={loading}>
-            {loading ? "Creating account..." : "Sign up"}
-          </button>
-        </div>
-      </form>
-
+  return (
+    <div>
       <div>
-        <p>
-          Already have an account?{' '}
-          {/* <Link href="/">Sign in</Link> */}
-          <Link href="/auth/signin">
-            Sign in
-          </Link>
-        </p>
-      </div>
+        <div>
+          <form onSubmit={handleSubmit}>
+            {error && <div>{error}</div>}
+
+            {message && (
+              <div>
+                <h3>Email Verification Required</h3>
+                <p>{message}</p>
+              </div>
+            )}
+
+            <div>
+              <label htmlFor="email">Email address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="password">Password</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autoComplete="new-password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="confirmPassword">Confirm Password</label>
+              <input
+                id="confirmPassword"
+                name="confirmPassword"
+                type="password"
+                autoComplete="new-password"
+                required
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+              />
+            </div>
+
+            <div>
+              <button type="submit" disabled={loading}>
+                {loading ? "Creating account..." : "Sign up"}
+              </button>
+            </div>
+          </form>
+
+          <div>
+            <p>
+              Already have an account? {/* <Link href="/">Sign in</Link> */}
+              <Link href="/auth/signin">Sign in</Link>
+            </p>
+          </div>
         </div>
-        </div>
-      
       </div>
-       
-    )
+    </div>
+  );
 }
