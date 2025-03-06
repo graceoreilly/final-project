@@ -12,7 +12,9 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.content}>
-        <p className={styles.credit}>Created by Team Six</p>
+        <p className={styles.credit}>
+          Created with ❤️ by Kim, Chris, Shanti, Grace, Sam and Monika
+        </p>
       </div>
     </footer>
   );
