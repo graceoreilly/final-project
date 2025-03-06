@@ -31,9 +31,11 @@ export function Chatbox() {
       isUser: true,
     };
 
-    if (!newUserMessage) {
-      console.log("Check newUserMessage");
-    }
+    // Add the user message to the messages array
+    setMessages((prev) => [...prev, newUserMessage]);
+
+    // Clear the input field
+    setInputValue("");
 
     // Simulate response (in a real app, this would be an API call)
     setTimeout(() => {
@@ -45,6 +47,7 @@ export function Chatbox() {
       setMessages((prev) => [...prev, newResponseMessage]);
     }, 1000);
   };
+
   return (
     <div className={styles.chatbox}>
       <div className={styles.messagesContainer}>
