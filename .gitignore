@@ -46,6 +46,3 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-
-# Temporarily ignore Playwright tests
-tests/playwrightTests/
