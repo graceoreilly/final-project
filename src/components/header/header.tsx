@@ -17,8 +17,8 @@ export default function Header() {
           <Image
             src="/logo.jpg"
             alt="MyMemories Logo"
-            width={175}
-            height={175}
+            width={160}
+            height={120}
             className={styles.logo}
             priority
           />

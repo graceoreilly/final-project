@@ -32,6 +32,7 @@
   padding: 1rem 1.5rem;
   color: #ffffff;
   text-decoration: none;
+  font-size: 24px;
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
@@ -64,6 +65,11 @@
   background-color: #b9f5d8;
   color: #271f30;
   cursor: pointer;
+  padding: 1rem 1.5rem; /* Adjust padding */
+  font-size: 24px; /* Adjust font size */
+  font-weight: 500; /* Adjust font weight */
+  text-align: center; /* Center text */
+  transition: background-color 0.2s ease; /* Transition effect */
 }
 
 .signOutButton:hover {
