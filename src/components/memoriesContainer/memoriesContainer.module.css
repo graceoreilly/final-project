@@ -1,0 +1,70 @@
+.container {
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+}
+
+.currentDay {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.currentDay h2 {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  color: var(--dark-purple);
+}
+
+.currentDay p {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1rem;
+  color: var(--dark-purple);
+}
+
+.reminder {
+  width: 40%;
+  background-color: #d2dfa3;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.reminder h3 {
+  font-size: 1.25rem;
+  color: var(--dark-purple);
+}
+
+.reminder p {
+  font-size: 1rem;
+  color: var(--dark-purple);
+}
+
+.memory {
+  display: flex;
+  align-items: center;
+  background-color: var(--mint);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.memory h3 {
+  font-size: 1.25rem;
+  color: var(--dark-purple);
+}
+
+.memory p {
+  font-size: 1.25rem;
+  font-size: 2rem;
+  color: var(--dark-purple);
+}
+
+.memoryImage {
+  width: 40%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
