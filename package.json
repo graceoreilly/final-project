@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
+    "test:playwright": "playwright test",
     "format": "prettier --write .",
     "prepare": "husky",
     "pre-commit": "eslint && prettier --check .",
