@@ -1,0 +1,23 @@
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.memoryCard {
+  background-color: var(--secondary-color);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-medium);
+}
+
+.memoryImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.memoryContent {
+  text-align: center;
+  margin-top: 8px;
+}
