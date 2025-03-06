@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "../../lib/supabaseClient";
 import styles from "./SignInForm.module.css";
+import { GoogleSignIn } from "./GoogleSignIn";
 
 interface AuthSignInFormProps {
   //function that runs after successful sign-in
@@ -156,10 +157,16 @@ export default function AuthSignInForm({
             type="button"
             className={styles.signUpButton}
           >
-            Sign up !!!
+            Sign up
           </button>
         </p>
       </div>
+  <div>
+  <GoogleSignIn 
+  buttonText="Sign in with Google" 
+  loadingText="Signing in..." 
+/>
+        </div>
     </div>
   );
 }
