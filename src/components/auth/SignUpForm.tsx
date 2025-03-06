@@ -2,18 +2,24 @@
 
 import { useState } from "react";
 import { supabase } from "../../lib/supabaseClient";
-import Link from "next/link"; //allows navigation between pages for login
+ import Link from "next/link"; //allows navigation between pages for login
 import { GoogleSignIn } from '../../components/auth/GoogleSignIn';
+import styles from "./SignUpForm.module.css"
 
 
 // create TS interface obj for what the object function expects to take in
 interface AuthSignUpFormProps {
   //onSucess will be called if sign-up is successful
   onSuccess?: () => void;
+  // required prop for toggling between forms
+  onToggleToSignIn?: () => void;
 }
 
-//receives an optional onSuccess function as a prop
-export default function AuthSignUpForm({ onSuccess }: AuthSignUpFormProps) {
+//receives an optional onSuccess and onToggleToSignIn function as a prop
+export default function AuthSignUpForm({ 
+  onSuccess, 
+  onToggleToSignIn 
+}: AuthSignUpFormProps) {
   // init variables for state management
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -91,75 +97,95 @@ export default function AuthSignUpForm({ onSuccess }: AuthSignUpFormProps) {
   };
 
   return (
-    <div>
+    <div className={styles.formContainer}>
+      <h2 className={styles.formTitle}>Create an account</h2>
       <div>
-        <div>
-          <form onSubmit={handleSubmit}>
-            {error && <div>{error}</div>}
+        <form className={styles.form} onSubmit={handleSubmit}>
+          {error && <div className={styles.errorMessage}>{error}</div>}
 
-            {message && (
-              <div>
-                <h3>Email Verification Required</h3>
-                <p>{message}</p>
-              </div>
-            )}
-
-            <div>
-              <label htmlFor="email">Email address</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
+          {message && (
+            <div className={styles.successMessage}>
+              <h3 className={styles.successTitle}>Email Verification Required</h3>
+              <p className={styles.successText}>{message}</p>
             </div>
+          )}
 
-            <div>
-              <label htmlFor="password">Password</label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                autoComplete="new-password"
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
+          <div className={styles.formGroup}>
+            <label className={styles.label} htmlFor="email">Email address</label>
+            <input
+              className={styles.input}
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-            <div>
-              <label htmlFor="confirmPassword">Confirm Password</label>
-              <input
-                id="confirmPassword"
-                name="confirmPassword"
-                type="password"
-                autoComplete="new-password"
-                required
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-            </div>
+          <div className={styles.formGroup}>
+            <label className={styles.label} htmlFor="password">Password</label>
+            <input
+              className={styles.input}
+              id="password"
+              name="password"
+              type="password"
+              autoComplete="new-password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
 
-            <div>
+            {/* <div>
               <button type="submit" disabled={loading}>
                 {loading ? "Creating account..." : "Sign up"}
               </button>
             </div>
-          </form>
+          </form> */}
+        
+          <div className={styles.formGroup}>
+            <label className={styles.label} htmlFor="confirmPassword">Confirm Password</label>
+            <input
+              className={styles.input}
+              id="confirmPassword"
+              name="confirmPassword"
+              type="password"
+              autoComplete="new-password"
+              required
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+          </div>
+
           <div>
+            <button 
+              className={styles.submitButton}
+              type="submit" 
+              disabled={loading}
+            >
+              {loading ? "Creating account..." : "Sign up"}
+            </button>
+          </div>
+        </form>
+
+        <div className={styles.signInPrompt}>
+          <p>
+            Already have an account?{" "}
+            <button 
+              onClick={onToggleToSignIn}
+              type="button"
+              className={styles.signInButton}
+            >
+              Sign in
+            </button>
+          </p>
+        </div>
+        <div>
   <div>OR</div>
   <GoogleSignIn />
 </div>
-          <div>
-            <p>
-              Already have an account? {/* <Link href="/">Sign in</Link> */}
-              <Link href="/auth/signin">Sign in</Link>
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );

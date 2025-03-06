@@ -34,10 +34,10 @@ async function signIn(email: string, password: string) {
 //Sign In with Google
 async function signInWithGoogle() {
   const { data, error } = await supabase.auth.signInWithOAuth({
-    provider: 'google',
+    provider: "google",
     options: {
-      redirectTo: window.location.origin + '/auth/callback',
-    }
+      redirectTo: window.location.origin + "/auth/callback",
+    },
   });
   return { data, error };
 }
