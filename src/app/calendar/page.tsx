@@ -1,13 +1,14 @@
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import Navigation from "../../components/navigation/navigation";
+import CalendarComponent from "../../app/calendar/CalendarComponent";
 
 export default function Calendar() {
   return (
     <div>
       <Header></Header>
       <Navigation></Navigation>
-      <h1>Calendar</h1>
+      <CalendarComponent />
       <Footer></Footer>
     </div>
   );
