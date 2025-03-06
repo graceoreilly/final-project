@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { getAllMemories, postMemory } from "@/db/memoryQueries";
 
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import Navigation from "../../components/navigation/navigation";
-import Image from "next/image";
 
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
@@ -20,7 +20,7 @@ interface Memory {
   date: string;
   title: string;
   description: string;
-  image: string | null;
+  image_metadata: string | null;
 }
 
 export default function TimelinePage() {
@@ -30,6 +30,18 @@ export default function TimelinePage() {
   const [description, setDescription] = useState<string>("");
   const [image, setImage] = useState<string | null>(null);
   const [enlargedImage, setEnlargedImage] = useState<string | null>(null);
+
+  const imagePicker = useRef<HTMLInputElement | null>(null);
+
+  async function fetchMemories() {
+    const fetchedMemories = await getAllMemories();
+
+    setMemories(fetchedMemories);
+  }
+
+  useEffect(() => {
+    fetchMemories();
+  }, []);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -44,20 +56,22 @@ export default function TimelinePage() {
     }
   };
 
-  const handleAddMemory = () => {
+  async function handleAddMemory() {
     if (date && title && description) {
-      const newMemory = { date, title, description, image };
-      const sortedMemories = [...memories, newMemory].sort(
-        (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
-      );
+      await postMemory({ date, title, description, image });
 
-      setMemories(sortedMemories);
       setDate("");
       setTitle("");
       setDescription("");
       setImage(null);
+
+      if (imagePicker.current) {
+        imagePicker.current.value = "";
+      }
+
+      await fetchMemories();
     }
-  };
+  }
 
   return (
     <>
@@ -92,6 +106,7 @@ export default function TimelinePage() {
             accept="image/*"
             onChange={handleImageChange}
             className={styles.input}
+            ref={imagePicker}
           />
           <button onClick={handleAddMemory} className={styles.button}>
             Add Memory
@@ -114,14 +129,12 @@ export default function TimelinePage() {
                     <strong>{memory.title}</strong>
                     <p>{memory.date}</p>
                     <p>{memory.description}</p>
-                    {memory.image && (
-                      <Image
-                        src={memory.image}
+                    {memory.image_metadata && (
+                      <img
+                        src={memory.image_metadata}
                         alt="Memory"
                         className={styles.memoryImage}
-                        width={300}
-                        height={200}
-                        onClick={() => setEnlargedImage(memory.image)}
+                        onClick={() => setEnlargedImage(memory.image_metadata)}
                       />
                     )}
                   </TimelineContent>
