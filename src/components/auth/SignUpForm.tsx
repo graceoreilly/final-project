@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { supabase } from "../../lib/supabaseClient";
+//  import Link from "next/link"; //allows navigation between pages for login
+import { GoogleSignIn } from "../../components/auth/GoogleSignIn";
 import styles from "./SignUpForm.module.css";
 
 // create TS interface obj for what the object function expects to take in
@@ -141,6 +143,13 @@ export default function AuthSignUpForm({
             />
           </div>
 
+          {/* <div>
+              <button type="submit" disabled={loading}>
+                {loading ? "Creating account..." : "Sign up"}
+              </button>
+            </div>
+          </form> */}
+
           <div className={styles.formGroup}>
             <label className={styles.label} htmlFor="confirmPassword">
               Confirm Password
@@ -179,6 +188,12 @@ export default function AuthSignUpForm({
               Sign in
             </button>
           </p>
+        </div>
+        <div>
+          <GoogleSignIn
+            buttonText="Sign up with Google"
+            loadingText="Signing up..."
+          />
         </div>
       </div>
     </div>

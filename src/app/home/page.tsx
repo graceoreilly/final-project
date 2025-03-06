@@ -2,6 +2,7 @@ import styles from "../page.module.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import Navigation from "@/components/navigation/navigation";
+import MemoriesContainer from "@/components/memoriesContainer/memoriesContainer";
 
 export default function Home() {
   return (
@@ -11,8 +12,11 @@ export default function Home() {
         <Navigation></Navigation>
         <div className={styles.content}>
           <h2>Welcome to MyMemories</h2>
-          <p>Store and share your precious memories with your loved ones.</p>
+          <p>Store and share your precious memories.</p>
         </div>
+        <main>
+          <MemoriesContainer></MemoriesContainer>
+        </main>
         <Footer></Footer>
       </main>
     </div>
