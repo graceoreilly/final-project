@@ -12,7 +12,7 @@ A memory aid app that helps individuals with cognitive impairments store and rev
 - Solution
 - Tech Stack
 - [Setup & Installation](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
-- [Features](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
+- Features
 - [Challenges & Learnings](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
 - Future Improvements
 - Contributors
@@ -82,10 +82,13 @@ npm run dev
 
 ## Features
 
-- **User authentication** with Firebase
-- **Real-time chat** between landlords and tenants
-- **Ticketing system** for maintenance requests
-- **Document upload & storage** for rental agreements
+- **Regaining Independence – Provides easy access to meaningful memories, reducing frustration and enhancing recall**
+- **Strengthening Emotional Connections – Helps users, caregivers, and family members bond through shared memories.** 
+- **Improving Well-being – Encourages a sense of identity and reduces anxiety related to memory loss.**
+- **Enhancing Daily Life – Supports users with features like:**
+        **Memories Collection in a Timeline – Organizes important moments chronologically for easy recall.**
+        **Calendar Reminders – Helps users stay on track with events and daily activities.**
+        **AI Assistant – Provides smart prompts and assistance in recalling and organizing memories.Document upload & storage**
 
 ---
 
