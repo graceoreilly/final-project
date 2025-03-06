@@ -21,7 +21,7 @@ interface ContentItem {
 }
 
 // Example array with mixed content types
-const mixedContentItems: ContentItem[] = [
+export const mixedContentItems: ContentItem[] = [
   {
     type: "image",
     title: "Family Reunion",
@@ -32,8 +32,8 @@ const mixedContentItems: ContentItem[] = [
   {
     type: "text",
     title: "About Martha",
-    content:
-      "Hello! I'm Martha Wilson, 68 years young and loving life in my retirement. After 32 years as an elementary school teacher, I now spend my days gardening, volunteering at the local library, and of course, spoiling my five wonderful grandchildren. My husband Robert and I celebrated our 45th anniversary last June with a cruise to Alaska - a dream come true!",
+    content: `Hello! I'm Martha Wilson, 68 years young and loving life in my retirement. After 32 years as an elementary school teacher, I now spend my days gardening, volunteering at the local library, and of course, spoiling my five wonderful grandchildren. My husband Robert and I celebrated our 45th anniversary last June with a cruise to Alaska - a dream come true!
+      `,
   },
   {
     type: "audio",
