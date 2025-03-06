@@ -9,7 +9,10 @@ type MemoryObject = {
 
 async function getAllMemories() {
   try {
-    const { data, error } = await supabase.from("user_memories").select();
+    const { data, error } = await supabase
+      .from("user_memories")
+      .select()
+      .order("date", { ascending: false });
 
     if (error) {
       console.error("Error fetching memories:", error);
