@@ -186,3 +186,43 @@
     transform: translateY(-5px);
   }
 }
+
+.loadingDots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingDots span {
+  animation: dotFade 1.4s infinite ease-in-out both;
+  font-size: 2rem;
+  margin: 0 2px;
+}
+
+.loadingDots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loadingDots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes dotFade {
+  0%,
+  80%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Style for disabled input during loading */
+.input:disabled,
+.sendButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
