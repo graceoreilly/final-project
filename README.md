@@ -10,7 +10,7 @@ A memory aid app that helps individuals with cognitive impairments store and rev
 
 - Problem Statement
 - Solution
-- [Tech Stack](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
+- Tech Stack
 - [Setup & Installation](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
 - [Features](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
 - [Challenges & Learnings](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
@@ -20,7 +20,7 @@ A memory aid app that helps individuals with cognitive impairments store and rev
 ---
 
 ## Problem Statement
-People with cognitive impairments often struggle with memory loss and disorientation, leading to frustration and a loss of independence. They lack easy access to these memories. There is a need for a tool that provides seamless access to meaningful memories, helping to improve recall, emotional well-being, and a sense of identity.
+Individuals experiencing memory-related challenges often struggle with forgetfulness and disorientation, leading to frustration and a loss of independence. They, along with their loved ones and caregivers, may find it difficult to recall important memories. There is a need for a tool that provides easy access to meaningful memories, improving recall, emotional well-being, and a sense of connection.
 
 The app is designed for individuals experiencing memory challenges due to cognitive impairments, such as dementia, Alzheimer’s, or brain injuries. It is also beneficial for their caregivers and family members, providing a shared space to preserve and interact with important memories, improving communication, and strengthening emotional connections.
 
@@ -34,15 +34,15 @@ This app helps individuals with cognitive impairments overcome memory loss and d
 
 ## Tech Stack
 
- **Frontend:** Next.js, TypeScript, Tailwind CSS
+**Frontend:** Next.js, TypeScript, CSS
 
- **Backend:** Node.js, Express, PostgreSQL
+**Backend:** Node.js, Express, Supabase
 
-**Authentication:** Firebase
+**Authentication:** Supabase
 
-**Testing:** Jest, Cypress
+**Testing:** Vitest
 
-**Deployment:** Netlify (Frontend), Render (Backend)
+**Deployment:** Vercel
 
 ---
 
