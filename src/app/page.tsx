@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import Header from "@/components/header/header";
-import Navigation from "@/components/navigation/navigation";
+
 import Footer from "@/components/footer/footer";
 import AuthSignUpForm from "@/components/auth/SignUpForm";
 import AuthSignInForm from "@/components/auth/SignInForm";
