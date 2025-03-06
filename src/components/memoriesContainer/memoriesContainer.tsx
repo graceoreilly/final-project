@@ -22,7 +22,7 @@ export default function MemoriesContainer() {
   return (
     <div className={styles.container}>
       <div className={styles.currentDay}>
-        <h2>{day}</h2>
+        <h2>Today is {day}</h2>
         <p>{date}</p>
       </div>
       <div className={styles.reminder}>
