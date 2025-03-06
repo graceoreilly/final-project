@@ -81,14 +81,14 @@ npm run dev
 ---
 
 ## Features
+**Regaining Independence – Provides easy access to meaningful memories, reducing frustration and enhancing recall**
+**Strengthening Emotional Connections – Helps users, caregivers, and family members bond through shared memories.** 
+**Improving Well-being – Encourages a sense of identity and reduces anxiety related to memory loss.**
+**Enhancing Daily Life – Supports users with features like:**
 
-- **Regaining Independence – Provides easy access to meaningful memories, reducing frustration and enhancing recall**
-- **Strengthening Emotional Connections – Helps users, caregivers, and family members bond through shared memories.** 
-- **Improving Well-being – Encourages a sense of identity and reduces anxiety related to memory loss.**
-- **Enhancing Daily Life – Supports users with features like:**
-        **Memories Collection in a Timeline – Organizes important moments chronologically for easy recall.**
-        **Calendar Reminders – Helps users stay on track with events and daily activities.**
-        **AI Assistant – Provides smart prompts and assistance in recalling and organizing memories.Document upload & storage**
+- Memories Collection in a Timeline – Organizes important moments chronologically for easy recall.**
+- Calendar Reminders – Helps users stay on track with events and daily activities.**
+- AI Assistant – Provides smart prompts and assistance in recalling and organizing memories.Document upload & storage**
 
 ---
 
@@ -124,14 +124,14 @@ Example:
 
 ## 👥 Contributors
 
-| Name | Role | GitHub |
-| --- | --- | --- |
-| Kim Lida | Backend & Database | [@yourhandle](https://github.com/yourhandle) |
-| Monika Lament | Frontend & UI/UX | [@teammate1](https://github.com/teammate1) |
-| Chris Lawlor | Frontend & UI/UX | [@teammate2](https://github.com/teammate2) |
-| Shanti Rai | Testing & DevOps | [@teammate2](https://github.com/teammate2) |
-| Samantha Daly | Testing & DevOps | [@teammate2](https://github.com/teammate2) |
-| Grace O'Reilly | Testing & DevOps | [@teammate2](https://github.com/teammate2) |
+| Name |  GitHub |
+| --- |  --- |
+| Kim Lida |  https://github.com/Kinukeo |
+| Monika Lament | https://github.com/lammona |
+| Chris Lawlor |  https://github.com/Lawlor-C |
+| Shanti Rai | https://github.com/codesungrape |
+| Samantha Daly | https://github.com/fenrissa92 |
+| Grace O'Reilly | https://github.com/graceoreilly |
 
 ---
 
