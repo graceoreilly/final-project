@@ -36,7 +36,6 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <Header></Header>
-        <Navigation></Navigation>
 
         {/* Conditional rendering based on state */}
         {showSignIn ? (
