@@ -51,18 +51,16 @@ This app helps individuals with cognitive impairments overcome memory loss and d
 1️⃣ Clone this repo:
 
 ```bash
-bash
-CopyEdit
-git clone [https://github.com/your-username/project-name.git]
-cd project-name
+
+git clone https://github.com/Kinukeo/final-project-chris-angels-1.git
+cd final-project-chris-angels-1
 
 ```
 
 2️⃣ Install dependencies:
 
 ```bash
-bash
-CopyEdit
+
 npm install
 
 ```
@@ -70,12 +68,17 @@ npm install
 3️⃣ Start the development server:
 
 ```bash
-bash
-CopyEdit
+
 npm run dev
 
 ```
+4️⃣ Open in the browser:
 
+```bash
+
+http://localhost:3000
+
+```
 ---
 
 ## Features
