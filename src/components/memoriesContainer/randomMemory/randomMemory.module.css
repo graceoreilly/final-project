@@ -1,23 +1,34 @@
-.container {
-  text-align: center;
-  margin-top: 20px;
+.memory {
+  display: flex;
+  align-items: center;
+  background-color: var(--mint);
+  padding: 1rem;
+  border-radius: 8px;
 }
 
-.memoryCard {
-  background-color: var(--secondary-color);
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: var(--shadow-medium);
+.memory h3 {
+  font-size: 1.25rem;
+  color: var(--dark-purple);
+}
+
+.memory p {
+  font-size: 1.25rem;
+  font-size: 2rem;
+  color: var(--dark-purple);
 }
 
 .memoryImage {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  width: 40%;
+  height: auto;
   border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.description {
+  display: flex;
+  align-items: end;
 }
 
-.memoryContent {
-  text-align: center;
-  margin-top: 8px;
+.memoryCard {
+  display: flex;
+  gap: 30px;
 }

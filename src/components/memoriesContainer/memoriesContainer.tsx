@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styles from "./memoriesContainer.module.css";
 import RandomMemory from "./randomMemory/randomMemory";
@@ -13,7 +12,7 @@ export default function MemoriesContainer() {
   });
 
   // Placeholder data for reminder and memory
-  const reminder = "Don't forget to call your friend!";
+  const reminder = "Today is Elena's Birthday!";
   // const memory = {
   //   image: "/legoland.jpg",
   //   description:
