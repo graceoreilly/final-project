@@ -28,6 +28,7 @@ export default function TimelinePage() {
   const [title, setTitle] = useState<string>("");
   const [description, setDescription] = useState<string>("");
   const [image, setImage] = useState<string | null>(null);
+  const [enlargedImage, setEnlargedImage] = useState<string | null>(null);
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -35,7 +36,7 @@ export default function TimelinePage() {
       const reader = new FileReader();
       reader.onloadend = () => {
         if (reader.result) {
-          setImage(reader.result as string); // Cast to string
+          setImage(reader.result as string);
         }
       };
       reader.readAsDataURL(file);
@@ -98,32 +99,56 @@ export default function TimelinePage() {
 
         {/* Timeline */}
         <div className={styles.timelineContainer}>
-          <Timeline position="alternate-reverse">
-            {memories.map((memory, index) => (
-              <TimelineItem key={index}>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  {index !== memories.length - 1 && <TimelineConnector />}
-                </TimelineSeparator>
-                <TimelineContent>
-                  <strong>{memory.title}</strong>
-                  <p>{memory.date}</p>
-                  <p>{memory.description}</p>
-                  {memory.image && (
-                    <Image
-                      src={memory.image}
-                      alt="Memory"
-                      className={styles.memoryImage}
-                      width={640}
-                      height={480}
-                    />
-                  )}
-                </TimelineContent>
-              </TimelineItem>
-            ))}
-          </Timeline>
+          {memories.length === 0 ? (
+            <p className={styles.placeholder}>No memories yet. Add some!</p>
+          ) : (
+            <Timeline position="alternate-reverse">
+              {memories.map((memory, index) => (
+                <TimelineItem key={index}>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    {index !== memories.length - 1 && <TimelineConnector />}
+                  </TimelineSeparator>
+                  <TimelineContent>
+                    <strong>{memory.title}</strong>
+                    <p>{memory.date}</p>
+                    <p>{memory.description}</p>
+                    {memory.image && (
+                      <Image
+                        src={memory.image}
+                        alt="Memory"
+                        className={styles.memoryImage}
+                        width={300}
+                        height={200}
+                        onClick={() => setEnlargedImage(memory.image)}
+                      />
+                    )}
+                  </TimelineContent>
+                </TimelineItem>
+              ))}
+            </Timeline>
+          )}
         </div>
       </div>
+
+      {/* Enlarged Image Modal */}
+      {enlargedImage && (
+        <div
+          className={styles.modalOverlay}
+          onClick={() => setEnlargedImage(null)}
+        >
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()} // Prevent click on image from closing the modal
+          >
+            <img
+              src={enlargedImage}
+              alt="Enlarged Memory"
+              className={styles.modalImage}
+            />
+          </div>
+        </div>
+      )}
 
       <Footer />
     </>
