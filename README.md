@@ -14,8 +14,8 @@ A memory aid app that helps individuals with cognitive impairments store and rev
 - [Setup & Installation](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
 - [Features](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
 - [Challenges & Learnings](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
-- [Future Improvements](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
-- [Contributors](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
+- Future Improvements
+- Contributors
 
 ---
 
@@ -105,11 +105,17 @@ Example:
 
 ## Future Improvements
 
-- What features would you add with more time?
+- **Personalized Memory Tools** – Different tools tailored to various types of memory difficulties (e.g. storytelling, audio prompts).
 
-Example:
+- **Expanded User Research & Partnerships** – Collaborate with organizations like the Alzheimer’s Society or social services to refine the app based on real user needs.
 
-- **Lease Agreement Templates** – Auto-generate lease agreements.
+- **Caregiver & Family Management Portal** – A dedicated portal for caregivers and family members to help organize, add, and curate memories.
+
+- **Multilingual Support** – Expand to other languages to make the app accessible to a broader audience.
+  
+- **Family Tree Integration** – Click on a person in the family tree to instantly view all stored pictures and memories related to them.
+
+- **Interactive Map View** – A visual map linking memories to the locations where they were made, helping users connect memories to places.
 
 ---
 
@@ -117,17 +123,16 @@ Example:
 
 | Name | Role | GitHub |
 | --- | --- | --- |
-| Your Name | Backend & Database | [@yourhandle](https://github.com/yourhandle) |
-| Teammate 1 | Frontend & UI/UX | [@teammate1](https://github.com/teammate1) |
-| Teammate 2 | Testing & DevOps | [@teammate2](https://github.com/teammate2) |
+| Kim Lida | Backend & Database | [@yourhandle](https://github.com/yourhandle) |
+| Monika Lament | Frontend & UI/UX | [@teammate1](https://github.com/teammate1) |
+| Chris Lawlor | Frontend & UI/UX | [@teammate2](https://github.com/teammate2) |
+| Shanti Rai | Testing & DevOps | [@teammate2](https://github.com/teammate2) |
+| Samantha Daly | Testing & DevOps | [@teammate2](https://github.com/teammate2) |
+| Grace O'Reilly | Testing & DevOps | [@teammate2](https://github.com/teammate2) |
 
 ---
 
 ## Why This Matters
 
-- **What impact does your project have in the real world?**
+- **My Memories app helps individuals with memory challenges regain independence by providing easy access to meaningful memories. It strengthens emotional connections between users, caregivers, and family members while improving overall well-being. By enhancing recall and reducing frustration, the app positively impacts daily life, fostering a sense of identity and encouraging personal storytelling.**
 
-Example:
-
-> LetChat improves landlord-tenant communication by reducing disputes and lost documents. This helps create better rental experiences and smoother property management.
->
