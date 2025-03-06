@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { supabase } from "../../lib/supabaseClient";
 import Link from "next/link"; //allows navigation between pages for login
+import { GoogleSignIn } from '../../components/auth/GoogleSignIn';
+
 
 // create TS interface obj for what the object function expects to take in
 interface AuthSignUpFormProps {
@@ -147,7 +149,10 @@ export default function AuthSignUpForm({ onSuccess }: AuthSignUpFormProps) {
               </button>
             </div>
           </form>
-
+          <div>
+  <div>OR</div>
+  <GoogleSignIn />
+</div>
           <div>
             <p>
               Already have an account? {/* <Link href="/">Sign in</Link> */}

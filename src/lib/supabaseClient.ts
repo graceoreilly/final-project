@@ -31,4 +31,15 @@ async function signIn(email: string, password: string) {
   return { user: data.user, error };
 }
 
-export { supabase, signIn, signUp };
+//Sign In with Google
+async function signInWithGoogle() {
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: 'google',
+    options: {
+      redirectTo: window.location.origin + '/auth/callback',
+    }
+  });
+  return { data, error };
+}
+
+export { supabase, signIn, signUp, signInWithGoogle };
