@@ -2,10 +2,9 @@
 
 import { useState } from "react";
 import { supabase } from "../../lib/supabaseClient";
- import Link from "next/link"; //allows navigation between pages for login
-import { GoogleSignIn } from '../../components/auth/GoogleSignIn';
-import styles from "./SignUpForm.module.css"
-
+//  import Link from "next/link"; //allows navigation between pages for login
+import { GoogleSignIn } from "../../components/auth/GoogleSignIn";
+import styles from "./SignUpForm.module.css";
 
 // create TS interface obj for what the object function expects to take in
 interface AuthSignUpFormProps {
@@ -16,9 +15,9 @@ interface AuthSignUpFormProps {
 }
 
 //receives an optional onSuccess and onToggleToSignIn function as a prop
-export default function AuthSignUpForm({ 
-  onSuccess, 
-  onToggleToSignIn 
+export default function AuthSignUpForm({
+  onSuccess,
+  onToggleToSignIn,
 }: AuthSignUpFormProps) {
   // init variables for state management
   const [email, setEmail] = useState("");
@@ -105,13 +104,17 @@ export default function AuthSignUpForm({
 
           {message && (
             <div className={styles.successMessage}>
-              <h3 className={styles.successTitle}>Email Verification Required</h3>
+              <h3 className={styles.successTitle}>
+                Email Verification Required
+              </h3>
               <p className={styles.successText}>{message}</p>
             </div>
           )}
 
           <div className={styles.formGroup}>
-            <label className={styles.label} htmlFor="email">Email address</label>
+            <label className={styles.label} htmlFor="email">
+              Email address
+            </label>
             <input
               className={styles.input}
               id="email"
@@ -125,7 +128,9 @@ export default function AuthSignUpForm({
           </div>
 
           <div className={styles.formGroup}>
-            <label className={styles.label} htmlFor="password">Password</label>
+            <label className={styles.label} htmlFor="password">
+              Password
+            </label>
             <input
               className={styles.input}
               id="password"
@@ -138,15 +143,17 @@ export default function AuthSignUpForm({
             />
           </div>
 
-            {/* <div>
+          {/* <div>
               <button type="submit" disabled={loading}>
                 {loading ? "Creating account..." : "Sign up"}
               </button>
             </div>
           </form> */}
-        
+
           <div className={styles.formGroup}>
-            <label className={styles.label} htmlFor="confirmPassword">Confirm Password</label>
+            <label className={styles.label} htmlFor="confirmPassword">
+              Confirm Password
+            </label>
             <input
               className={styles.input}
               id="confirmPassword"
@@ -160,9 +167,9 @@ export default function AuthSignUpForm({
           </div>
 
           <div>
-            <button 
+            <button
               className={styles.submitButton}
-              type="submit" 
+              type="submit"
               disabled={loading}
             >
               {loading ? "Creating account..." : "Sign up"}
@@ -173,7 +180,7 @@ export default function AuthSignUpForm({
         <div className={styles.signInPrompt}>
           <p>
             Already have an account?{" "}
-            <button 
+            <button
               onClick={onToggleToSignIn}
               type="button"
               className={styles.signInButton}
@@ -183,9 +190,9 @@ export default function AuthSignUpForm({
           </p>
         </div>
         <div>
-  <div>OR</div>
-  <GoogleSignIn />
-</div>
+          <div>OR</div>
+          <GoogleSignIn />
+        </div>
       </div>
     </div>
   );
