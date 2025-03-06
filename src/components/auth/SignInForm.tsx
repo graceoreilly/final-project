@@ -161,12 +161,12 @@ export default function AuthSignInForm({
           </button>
         </p>
       </div>
-  <div>
-  <GoogleSignIn 
-  buttonText="Sign in with Google" 
-  loadingText="Signing in..." 
-/>
-        </div>
+      <div>
+        <GoogleSignIn
+          buttonText="Sign in with Google"
+          loadingText="Signing in..."
+        />
+      </div>
     </div>
   );
 }

@@ -190,10 +190,10 @@ export default function AuthSignUpForm({
           </p>
         </div>
         <div>
-        <GoogleSignIn 
-  buttonText="Sign up with Google" 
-  loadingText="Signing up..." 
-/>
+          <GoogleSignIn
+            buttonText="Sign up with Google"
+            loadingText="Signing up..."
+          />
         </div>
       </div>
     </div>
