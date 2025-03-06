@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styles from "./memoriesContainer.module.css";
+import RandomMemory from "./randomMemory/randomMemory";
 
 export default function MemoriesContainer() {
   const currentDate = new Date();
@@ -12,12 +13,12 @@ export default function MemoriesContainer() {
   });
 
   // Placeholder data for reminder and memory
-  const reminder = "Don't forget to call your friend!";
-  const memory = {
-    image: "/legoland.jpg",
-    description:
-      "September 20, 2024 — A day of pure joy for my granddaughter, her husband, and their little ones, Marcelina and Filip. At Legoland, they marveled at towering brick creations, built their own masterpieces, and laughed their way through exciting rides. The children’s wonder and excitement made it a day to remember—a beautiful adventure for their young hearts.",
-  };
+  const reminder = "Today is Elena's Birthday!";
+  // const memory = {
+  //   image: "/legoland.jpg",
+  //   description:
+  //     "September 20, 2024 — A day of pure joy for my granddaughter, her husband, and their little ones, Marcelina and Filip. At Legoland, they marveled at towering brick creations, built their own masterpieces, and laughed their way through exciting rides. The children’s wonder and excitement made it a day to remember—a beautiful adventure for their young hearts.",
+  // };
 
   return (
     <div className={styles.container}>
@@ -30,8 +31,7 @@ export default function MemoriesContainer() {
         <p>{reminder}</p>
       </div>
       <div className={styles.memory}>
-        <img src={memory.image} alt="Memory" className={styles.memoryImage} />
-        <p>{memory.description}</p>
+        <RandomMemory></RandomMemory>
       </div>
     </div>
   );
