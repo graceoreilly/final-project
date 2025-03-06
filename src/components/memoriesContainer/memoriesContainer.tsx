@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styles from "./memoriesContainer.module.css";
 import RandomMemory from "./randomMemory/randomMemory";
