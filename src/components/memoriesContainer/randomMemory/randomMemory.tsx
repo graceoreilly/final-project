@@ -41,8 +41,8 @@ const RandomMemory: React.FC = () => {
           />
         )}
         <div className={styles.memoryContent}>
-          <p>{randomMemory.date}</p>
-          <h3>{randomMemory.title}</h3>
+          <p className={styles.memoryCardDate}>{randomMemory.date}</p>
+          {/* <h3>{randomMemory.title}</h3> */}
           <p className={styles.description}>{randomMemory.description}</p>
         </div>
       </div>

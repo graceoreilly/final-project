@@ -19,3 +19,14 @@
   font-size: 1rem;
   font-weight: 500; /* Medium font weight */
 }
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: #2c6e49; /* Highlight color on hover */
+}
