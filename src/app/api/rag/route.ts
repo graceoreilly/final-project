@@ -3,8 +3,10 @@ import { NextResponse } from "next/server";
 import { processQuery, addDocumentToVectorDB } from "@/utils/rag";
 import { processDocumentForRag } from "@/utils/chunking";
 
+// Handles queries to the RAG system
 export async function POST(request: Request) {
   try {
+    // Receive query from the user
     const body = await request.json();
     const { query } = body;
 
@@ -14,9 +16,10 @@ export async function POST(request: Request) {
         { status: 400 },
       );
     }
-
+    // Function to process the query against the vector database
     const response = await processQuery(query);
 
+    // return response to client
     return NextResponse.json({ response });
   } catch (error: any) {
     console.error("Error in RAG API route:", error);
@@ -31,6 +34,7 @@ export async function POST(request: Request) {
 // Endpoint to add documents to your vector database
 export async function PUT(request: Request) {
   try {
+    // Receives text content and optional metadata
     const body = await request.json();
     const { text, metadata } = body;
 
@@ -44,6 +48,7 @@ export async function PUT(request: Request) {
     // Process document with chunking for larger texts
     await processDocumentForRag(text, metadata || {}, addDocumentToVectorDB);
 
+    // Run a success response
     return NextResponse.json({ success: true });
   } catch (error: any) {
     console.error("Error adding document:", error);
