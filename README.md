@@ -13,7 +13,7 @@ A memory aid app that helps individuals with cognitive impairments store and rev
 - Tech Stack
 - Setup & Installation
 - Features
-- [Challenges & Learnings](https://www.notion.so/Github-Template-Group-1a0e1fab09da80948d59caa3ae973ffe?pvs=21)
+- Challenges & Learnings
 - Future Improvements
 - Contributors
 
@@ -98,15 +98,16 @@ http://localhost:3000
 
 ## Challenges & Learnings
 
-- What did you and your team struggle with?
-- What skills did you improve?
+What went well:
+- Strong teamwork and communication throughout the sprint
+- Effective use of Git hooks and version control
+- Quick decision-making with dot voting
+- Successfully implemented core features within the tight deadline
 
-Example:
-
-> Key Takeaways:
-> 
-> - Implementing **real-time chat** using Firebase was a challenge due to security concerns, but we learned about Firestore rules.
-> - Managing **user roles (landlords vs. tenants)** in the database helped us understand relational data modelling.
+Areas for improvement:
+- Add build tests earlier – Introducing testing from the start would have helped catch issues sooner and improve code reliability.
+- Better conflict resolution – Merge conflicts should be resolved carefully in the IDE to avoid overwriting changes.
+- Take more regular breaks – Working intensely for long periods led to fatigue; structured breaks could improve focus and productivity.
 
 ---
 
