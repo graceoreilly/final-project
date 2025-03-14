@@ -1,0 +1,172 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.carouselContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.carouselTrack {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.carouselSlide {
+  position: absolute;
+  width: 300px;
+  height: 320px;
+  transition: all 0.5s ease;
+  background-color: #000;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.active {
+  z-index: 10;
+}
+
+.memoryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carouselButton {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.carouselButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prevButton {
+  left: 10px;
+  position: absolute;
+}
+
+.nextButton {
+  right: 10px;
+  position: absolute;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modalContent {
+  position: relative;
+  max-width: 90%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #2c6e49;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  animation: modalOpen 0.3s ease-out;
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expandedImage {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.memoryInfo {
+  padding: 20px;
+  color: white;
+}
+
+.memoryDate {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .carouselTrack {
+    width: 80%;
+  }
+
+  .carouselSlide {
+    width: 180px;
+    height: 260px;
+  }
+
+  .modalContent {
+    max-width: 95%;
+  }
+}

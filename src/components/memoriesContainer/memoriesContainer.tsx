@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./memoriesContainer.module.css";
-import RandomMemory from "./randomMemory/randomMemory";
+import MemoryCarousel from "./memoryCarousel/memoryCarousel";
 
 export default function MemoriesContainer() {
   const currentDate = new Date();
@@ -27,7 +27,7 @@ export default function MemoriesContainer() {
         </div>
       </div>
       <div className={styles.memory}>
-        <RandomMemory />
+        <MemoryCarousel />
       </div>
     </div>
   );
