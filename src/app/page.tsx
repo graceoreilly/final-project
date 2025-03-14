@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
-import Header from "@/components/header/header";
 
 import Footer from "@/components/footer/footer";
 import AuthSignUpForm from "@/components/auth/SignUpForm";
@@ -35,8 +34,6 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Header></Header>
-
         {/* Conditional rendering based on state */}
         {showSignIn ? (
           <AuthSignInForm
