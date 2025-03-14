@@ -1,40 +1,20 @@
-// import Link from "next/link";
-// import styles from "./navigation.module.css";
-
-// export default function Navigation() {
-//   return (
-//     <nav>
-//       <ul className={styles.navList}>
-//         <li>
-//           <Link href="/">Home</Link>
-//         </li>
-//         <li>
-//           <Link href="/timeline">Timeline</Link>
-//         </li>
-//         <li>
-//           <Link href="/about">About</Link>
-//         </li>
-//         <li>
-//           <Link href="/calendar">Calendar</Link>
-//         </li>
-//         <li>
-//           <Link href="/tree">Tree</Link>
-//         </li>
-//         <li>
-//           <Link href="/assistant">Assistant</Link>
-//         </li>
-//       </ul>
-//     </nav>
-//   );
-// }
-
 import Link from "next/link";
 import styles from "./navigation.module.css";
 import LogoutButton from "../auth/LogOutButton";
+import Image from "next/image";
 
 export default function Navigation() {
   return (
     <nav className={styles.navigation}>
+      <div>
+        <Image
+          src="/logo.jpg"
+          alt="logo"
+          width={80}
+          height={80}
+          className={styles.logo}
+        />
+      </div>
       <ul className={styles.navList}>
         <div className={styles.navItemsContainer}>
           <li className={styles.navItem}>

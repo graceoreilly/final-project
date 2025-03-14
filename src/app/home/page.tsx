@@ -1,5 +1,4 @@
 import styles from "../page.module.css";
-import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import Navigation from "@/components/navigation/navigation";
 import MemoriesContainer from "@/components/memoriesContainer/memoriesContainer";
@@ -8,7 +7,6 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Header></Header>
         <Navigation></Navigation>
         <div className={styles.content}>
           <h2>Welcome to MyMemories</h2>
