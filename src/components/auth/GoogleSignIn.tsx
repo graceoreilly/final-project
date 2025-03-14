@@ -49,7 +49,7 @@ export function GoogleSignIn({
 
   return (
     <button
-      className={className}
+      className={`${className} ${styles.leftAlignSelf}`}
       onClick={handleGoogleSignIn}
       disabled={loading}
     >

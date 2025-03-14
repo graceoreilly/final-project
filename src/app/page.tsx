@@ -28,7 +28,6 @@ export default function Home() {
   // Handle successful sign up
   const handleSignUpSuccess = () => {
     console.log("Sign up successful");
-    // You can add special handling for sign up success if needed
   };
 
   return (
@@ -38,7 +37,7 @@ export default function Home() {
         {showSignIn ? (
           <AuthSignInForm
             onSuccess={handleSignInSuccess}
-            redirectTo="/home" // This is a backup if onSuccess doesn't handle the redirect
+            redirectTo="/home"
             onToggleToSignUp={toggleForm}
           />
         ) : (
@@ -47,9 +46,8 @@ export default function Home() {
             onToggleToSignIn={toggleForm}
           />
         )}
-
-        <Footer></Footer>
       </main>
+      <Footer />
     </div>
   );
 }

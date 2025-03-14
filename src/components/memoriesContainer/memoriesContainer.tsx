@@ -11,26 +11,23 @@ export default function MemoriesContainer() {
     day: "numeric",
   });
 
-  // Placeholder data for reminder and memory
+  // Placeholder data for reminder
   const reminder = "Today is Elena's Birthday!";
-  // const memory = {
-  //   image: "/legoland.jpg",
-  //   description:
-  //     "September 20, 2024 — A day of pure joy for my granddaughter, her husband, and their little ones, Marcelina and Filip. At Legoland, they marveled at towering brick creations, built their own masterpieces, and laughed their way through exciting rides. The children’s wonder and excitement made it a day to remember—a beautiful adventure for their young hearts.",
-  // };
 
   return (
     <div className={styles.container}>
-      <div className={styles.currentDay}>
-        <h2>Today is {day}</h2>
-        <p>{date}</p>
-      </div>
       <div className={styles.reminder}>
-        <h3>Reminder</h3>
-        <p>{reminder}</p>
+        <div className={styles.reminderContent}>
+          <h3>Reminder</h3>
+          <p>{reminder}</p>
+        </div>
+        <div className={styles.reminderDate}>
+          <p>{day}</p>
+          <p>{date}</p>
+        </div>
       </div>
       <div className={styles.memory}>
-        <RandomMemory></RandomMemory>
+        <RandomMemory />
       </div>
     </div>
   );
