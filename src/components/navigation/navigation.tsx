@@ -7,13 +7,15 @@ export default function Navigation() {
   return (
     <nav className={styles.navigation}>
       <div>
-        <Image
-          src="/logo.jpg"
-          alt="logo"
-          width={80}
-          height={80}
-          className={styles.logo}
-        />
+        <Link href="/home">
+          <Image
+            src="/logo.jpg"
+            alt="logo"
+            width={80}
+            height={80}
+            className={styles.logo}
+          />
+        </Link>
       </div>
       <ul className={styles.navList}>
         <div className={styles.navItemsContainer}>

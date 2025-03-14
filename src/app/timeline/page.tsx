@@ -4,7 +4,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { getAllMemories, postMemory } from "@/db/memoryQueries";
 
-import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import Navigation from "../../components/navigation/navigation";
 
@@ -75,7 +74,6 @@ export default function TimelinePage() {
 
   return (
     <>
-      <Header />
       <Navigation />
       <h1>Timeline</h1>
       <div className={styles.container}>
