@@ -29,12 +29,21 @@
   animation: flyInFromLeft 1s ease-out forwards;
   opacity: 0;
   transform: translateX(-100px);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.memories {
+  font-family: "Parisienne", cursive;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 40px;
 }
 
 .paragraphHeading {
   animation: flyInFromLeft 1s ease-out 0.3s forwards;
   opacity: 0;
   transform: translateX(-100px);
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 @keyframes flyInFromLeft {

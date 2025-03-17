@@ -1,28 +1,29 @@
 .container {
-  padding: 0; /* Remove padding */
-  background-color: transparent; /* Make container background transparent */
-  margin: 0 auto; /* Remove top/bottom margin, keep centered horizontally */
+  padding: 0;
+  background-color: transparent;
+  margin: 0 auto;
   max-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
+  padding-bottom: 100px;
 }
 
-/* Move the reminder up by reordering your components in the CSS */
 .reminder {
   width: 100%;
   background-color: #d2dfa3;
   padding: 1.5rem 2rem;
   border-radius: 8px;
-  margin: 0 0 3rem 0; /* Remove top margin */
+  margin: 0 0 3rem 0;
   animation: flyInFromRight 1s ease-out 0.5s forwards;
   opacity: 0;
   transform: translateX(100px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.08);
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .reminderContent {
@@ -59,7 +60,7 @@
 }
 
 .currentDay {
-  display: none; /* Hide this since we're moving date to reminder box */
+  display: none;
 }
 
 .memory {
@@ -71,12 +72,11 @@
   padding: 1.5rem;
   border-radius: 8px;
   width: 100%;
-  animation: fadeIn 1s ease-out 0.9s forwards; /* Adjusted timing */
+  animation: fadeIn 1s ease-out 0.9s forwards;
   opacity: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Keep your other styles as is */
 .memory h3 {
   font-size: 1.25rem;
   color: white;
@@ -89,7 +89,7 @@
 
 .memoryImage {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   border-radius: 8px;
   margin-bottom: 1rem;

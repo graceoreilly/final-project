@@ -9,7 +9,9 @@ export default function Home() {
       <Navigation />
       <main className={styles.main}>
         <div className={styles.content}>
-          <h2 className={styles.heading}>Welcome to MyMemories</h2>
+          <h2 className={styles.heading}>
+            Welcome to <span className={styles.memories}>MyMemories</span>
+          </h2>
           <p className={styles.paragraphHeading}>
             Store and share your precious memories.
           </p>
