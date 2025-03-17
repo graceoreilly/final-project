@@ -3,11 +3,15 @@
   display: flex;
   flex-direction: column;
   color: white;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .container h2 {
   margin-bottom: 1.5rem;
   text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: clamp(2rem, 5vw, 3rem);
 }
 
 .carouselContainer {
@@ -15,14 +19,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30rem;
+  height: clamp(20rem, 60vh, 30rem);
   margin: 0 auto;
   width: 100%;
+  max-width: 1200px;
 }
 
 .carouselTrack {
   position: relative;
-  width: 70%;
+  width: 80%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -40,6 +45,7 @@
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  will-change: transform, opacity;
 }
 
 .active {
@@ -57,15 +63,16 @@
   color: white;
   border: none;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
+  width: clamp(32px, 5vw, 40px);
+  height: clamp(32px, 5vw, 40px);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   cursor: pointer;
   z-index: 20;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
+  touch-action: manipulation;
 }
 
 .carouselButton:hover {
@@ -73,12 +80,12 @@
 }
 
 .prevButton {
-  left: 10px;
+  left: max(10px, 2%);
   position: absolute;
 }
 
 .nextButton {
-  right: 10px;
+  right: max(10px, 2%);
   position: absolute;
 }
 
@@ -99,7 +106,7 @@
 
 .modalContent {
   position: relative;
-  max-width: 90%;
+  width: clamp(300px, 90%, 1000px);
   max-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -108,6 +115,8 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   animation: modalOpen 0.3s ease-out;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding-bottom: 100px;
 }
 
 @keyframes modalOpen {
@@ -123,21 +132,22 @@
 
 .closeButton {
   position: absolute;
-  top: 10px;
+  top: 40px;
   right: 10px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  font-size: 1.5rem;
+  width: clamp(30px, 5vw, 36px);
+  height: clamp(30px, 5vw, 36px);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
   line-height: 1;
   cursor: pointer;
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
+  touch-action: manipulation;
 }
 
 .expandedImage {
@@ -147,26 +157,86 @@
 }
 
 .memoryInfo {
-  padding: 20px;
+  padding: clamp(10px, 3vw, 20px);
   color: white;
 }
 
 .memoryDate {
   font-weight: bold;
   margin-bottom: 5px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.memoryInfo h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+
+.memoryInfo p {
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 1024px) {
+  .carouselTrack {
+    width: 85%;
+  }
 }
 
 @media (max-width: 768px) {
+  .carouselContainer {
+    height: clamp(18rem, 50vh, 24rem);
+  }
+
   .carouselTrack {
-    width: 80%;
+    width: 90%;
   }
 
   .carouselSlide {
-    width: 180px;
-    height: 260px;
+    width: 250px;
+    height: 280px;
   }
 
   .modalContent {
-    max-width: 95%;
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .carouselContainer {
+    height: clamp(15rem, 45vh, 20rem);
+  }
+
+  .carouselSlide {
+    width: 200px;
+    height: 220px;
+  }
+
+  .carouselSlide.active {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .expandedImage {
+    max-height: 60vh;
+  }
+}
+
+/* Touch device optimization */
+@media (hover: none) {
+  .carouselButton {
+    opacity: 0.9;
+    width: clamp(40px, 7vw, 50px);
+    height: clamp(40px, 7vw, 50px);
+  }
+
+  .closeButton {
+    width: clamp(36px, 8vw, 44px);
+    height: clamp(36px, 8vw, 44px);
   }
 }
