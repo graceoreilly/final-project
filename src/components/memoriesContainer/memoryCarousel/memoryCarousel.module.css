@@ -11,7 +11,7 @@
   margin-bottom: 1.5rem;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .carouselContainer {
