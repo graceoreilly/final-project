@@ -8,14 +8,13 @@ An app for individuals to store their treasured memories in one place.
 
 ## Table of Contents
 
-- Problem Statement
-- Solution
-- Tech Stack
-- Setup & Installation
-- Features
-- Challenges & Learnings
-- Future Improvements
-- Contributors
+- [Problem Statement](#problem-statement)
+- [Solution](#solution)
+- [Tech Stack](#tech-stack)
+- [Setup & Installation](#setup--installation)
+- [Challenges & Learnings](#challenges--learnings)
+- [Future Improvements](#future-improvements)
+- [Contributors](-contributors)
 
 ---
 
