@@ -1,8 +1,8 @@
 # My Memories
 
-A memory aid app that helps individuals with cognitive impairments store and revisit their cherished memories, enhancing recall, emotional well-being, and independence.
+An app for individuals to store their treasured memories in one place.
 
-**Live Demo:** https://my-memories-omega.vercel.app/
+**Link to deployed site:** [MyMemories](https://mymemories-tawny.vercel.app/)
 
 ---
 
@@ -20,15 +20,16 @@ A memory aid app that helps individuals with cognitive impairments store and rev
 ---
 
 ## Problem Statement
-Individuals experiencing memory-related challenges often struggle with forgetfulness and disorientation, leading to frustration and a loss of independence. They, along with their loved ones and caregivers, may find it difficult to recall important memories. There is a need for a tool that provides easy access to meaningful memories, improving recall, emotional well-being, and a sense of connection.
-
-The app is designed for individuals experiencing memory challenges due to cognitive impairments, such as dementia, Alzheimer’s, or brain injuries. It is also beneficial for their caregivers and family members, providing a shared space to preserve and interact with important memories, improving communication, and strengthening emotional connections.
+People often struggle to find the right place to store their memories. They need a solution where photos and videos won't be forgotten, allowing them to enjoy those happy moments wherever they are.
 
 ---
 
 ## Solution
-
-This app helps individuals with cognitive impairments overcome memory loss and disorientation by providing an easy-to-navigate platform for storing and revisiting meaningful memories. It reduces frustration by organizing memories in a structured way, using images and short stories as prompts to trigger recollection and emotions. By enabling users to engage in meaningful conversations with family and caregivers, the app fosters emotional well-being, a sense of identity, and greater independence.
+A centralised digital memory platform with key features such as
+- An about me page to store a collection of important memories
+- A timeline showing chronological memories
+- A calendar to keep track of important dates and memories
+- An AI assistance that uses a RAG model so the user can ask personalised questions about their memories
 
 ---
 
@@ -52,8 +53,8 @@ This app helps individuals with cognitive impairments overcome memory loss and d
 
 ```bash
 
-git clone https://github.com/Kinukeo/final-project-chris-angels-1.git
-cd final-project-chris-angels-1
+git clone git@github.com:graceoreilly/final-project.git
+cd final-project
 
 ```
 
@@ -79,20 +80,6 @@ npm run dev
 http://localhost:3000
 
 ```
----
-
-## Features
-**Regaining Independence – Provides easy access to meaningful memories, reducing frustration and enhancing recall**
-
-**Strengthening Emotional Connections – Helps users, caregivers, and family members bond through shared memories.** 
-
-**Improving Well-being – Encourages a sense of identity and reduces anxiety related to memory loss.**
-
-**Enhancing Daily Life – Supports users with features like:**
-
-- Memories Collection in a Timeline – Organizes important moments chronologically for easy recall.
-- Calendar Reminders – Helps users stay on track with events and daily activities.
-- AI Assistant – Provides smart prompts and assistance in recalling and organizing memories.Document upload & storage.
 
 ---
 
@@ -106,24 +93,24 @@ What went well:
 
 Areas for improvement:
 - Add build tests earlier – Introducing testing from the start would have helped catch issues sooner and improve code reliability.
-- Better conflict resolution – Merge conflicts should be resolved carefully in the IDE to avoid overwriting changes.
+- Better code conflict resolution – Merge conflicts should be resolved carefully in the IDE to avoid overwriting changes.
 - Take more regular breaks – Working intensely for long periods led to fatigue; structured breaks could improve focus and productivity.
+- Improved UI - Improve responsiveness
 
 ---
 
 ## Future Improvements
 
-- **Personalized Memory Tools** – Different tools tailored to various types of memory difficulties (e.g. storytelling, audio prompts).
 
-- **Expanded User Research & Partnerships** – Collaborate with organizations like the Alzheimer’s Society or social services to refine the app based on real user needs.
-
-- **Caregiver & Family Management Portal** – A dedicated portal for caregivers and family members to help organize, add, and curate memories.
-
-- **Multilingual Support** – Expand to other languages to make the app accessible to a broader audience.
+- **Expanded User Research & Partnerships** – Complete a user research study to gain insights and areas for improvement
   
 - **Family Tree Integration** – Click on a person in the family tree to instantly view all stored pictures and memories related to them.
 
 - **Interactive Map View** – A visual map linking memories to the locations where they were made, helping users connect memories to places.
+
+- **Improved User Interface** - Improve responsiveness for a clean, sleek layout
+
+- **Expanded user audience** - In the future the team would like to carry out research and use this app to support people with various cognitive impairments
 
 ---
 
@@ -142,5 +129,5 @@ Areas for improvement:
 
 ## Why This Matters
 
-- **My Memories app helps individuals with memory challenges regain independence by providing easy access to meaningful memories. It strengthens emotional connections between users, caregivers, and family members while improving overall well-being. By enhancing recall and reducing frustration, the app positively impacts daily life, fostering a sense of identity and encouraging personal storytelling.**
+- **My Memories app preseves cherished memories in a centralised digital platform, aims to improve mental wellbeing by providing a space for positive reflection and in the future the team hopes that this app will be able to support people with cognitive impairments to have an easy place to access memories during challenging times.**
 
